@@ -1,4 +1,7 @@
 // Owner: Manya - data grid
+// Ye file kya karti hai: table dikhati hai jisme search, filter, sort aur pagination hai
+// Isme useState hain: search, filters, sort, page aur selected rows ke liye
+// Ye Users.jsx se judi hai, jo ise columns aur data deta hai
 
 import { useEffect, useRef, useState } from "react";
 import { exportCsv } from "../utils/exportCsv.js";
@@ -155,8 +158,7 @@ export default function UserTable({
           <input
             ref={searchInputRef}
             type="text"
-            placeholder="Search all columns... (press / to focus)"
-            value={search}
+placeholder="Search users... (press / to focus)"            value={search}
             onChange={(e) => {
               setSearch(e.target.value);
               setPage(1);
