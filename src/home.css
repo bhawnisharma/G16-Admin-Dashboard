@@ -1,0 +1,48 @@
+/* Owner: Harshpreet - home page styles */
+
+.home { min-height: 100vh; color: var(--text); overflow-x: hidden; }
+.home__nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 6vw; }
+.home__nav div { display: flex; gap: 12px; align-items: center; }
+.home__brand { display: flex; align-items: center; gap: 10px; font-family: "Syne", sans-serif; font-size: 24px; }
+.home .btn { text-decoration: none; display: inline-block; }
+
+.home__hero { display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; padding: 50px 6vw 80px; }
+.home__hero-text { flex: 1 1 420px; max-width: 640px; }
+.home__hero h1 { font-size: clamp(38px, 6vw, 68px); line-height: 1.05; margin: 0 0 20px; }
+.home__typed { color: var(--amber); }
+.home__cursor { color: var(--accent); animation: blink 1s infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.home__hero p { color: var(--text-muted); font-size: 18px; line-height: 1.6; max-width: 52ch; }
+.home__actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+
+.home__sun {
+  flex: 0 1 380px; aspect-ratio: 1; border-radius: 50%;
+  background:
+    repeating-linear-gradient(to bottom, transparent 0 22px, var(--bg) 22px 28px),
+    linear-gradient(to bottom, var(--amber), var(--accent) 60%, #8a2be2);
+  box-shadow: 0 0 90px var(--glow);
+  animation: float 5s ease-in-out infinite alternate;
+}
+@keyframes float { from { transform: translateY(-10px); } to { transform: translateY(14px); } }
+
+.home__strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin: 0 6vw; background: var(--border); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; }
+.home-counter { background: var(--surface); padding: 26px; }
+.home-counter h3 { margin: 0; font-size: 36px; color: var(--cyan); }
+.home-counter p { margin: 6px 0 0; color: var(--text-muted); }
+
+.home__features { padding: 90px 6vw 40px; }
+.home__features h2 { font-size: 34px; margin: 0 0 28px; }
+.home__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.home-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 24px; transition: transform .25s, border-color .25s; }
+.home-card:hover { transform: translateY(-6px); border-color: var(--accent); }
+.home-card__icon { display: inline-block; font-size: 26px; color: var(--amber); margin-bottom: 10px; }
+.home-card h3 { margin: 0 0 8px; }
+.home-card p { margin: 0; color: var(--text-muted); line-height: 1.5; }
+
+.home__team { padding: 60px 6vw 70px; }
+.home__people { display: flex; gap: 40px; flex-wrap: wrap; color: var(--text-muted); }
+.home__people p { margin: 0; line-height: 1.6; }
+.home__people b { color: var(--text); }
+
+@media (max-width: 800px) { .home__strip { grid-template-columns: 1fr 1fr; } .home__sun { flex-basis: 240px; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

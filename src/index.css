@@ -1,0 +1,52 @@
+/* Owner: Bhawni - theme colours and fonts */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+:root[data-theme="dark"] {
+  --bg: #170f2e;
+  --surface: #241848;
+  --surface-alt: #2d1f5a;
+  --border: #3a2a6b;
+  --text: #f4eeff;
+  --text-muted: #a99bd1;
+  --accent: #ff4d8d;
+  --accent-soft: rgba(255, 77, 141, 0.16);
+  --green: #4de1b0;
+  --red: #ff6b81;
+  --amber: #ffb84d;
+  --cyan: #4de1ff;
+  --glow: rgba(255, 77, 141, 0.45);
+}
+
+:root[data-theme="light"] {
+  --bg: #fff4ec;
+  --surface: #ffffff;
+  --surface-alt: #ffeadd;
+  --border: #f3d5c4;
+  --text: #2b1740;
+  --text-muted: #7d6a92;
+  --accent: #e6246f;
+  --accent-soft: rgba(230, 36, 111, 0.1);
+  --green: #0f9d6a;
+  --red: #d6395f;
+  --amber: #d98200;
+  --cyan: #0a8fb0;
+  --glow: rgba(230, 36, 111, 0.25);
+}
+
+body {
+  font-family: "DM Sans", "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(circle at 85% -10%, rgba(120, 40, 160, 0.45) 0, transparent 45%), var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+}
+h1, h2, h3, .sidebar__logo { font-family: "Syne", "Segoe UI", sans-serif; }
