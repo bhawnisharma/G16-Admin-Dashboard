@@ -1,4 +1,7 @@
 // Owner: Priyanshi - settings page
+// Ye file kya karti hai: theme aur role badalne ka settings page hai
+// Isme Context API ka useContext use hota hai
+// Ye AppContext.jsx se theme aur role leti hai
 
 import { useContext, useEffect } from "react";
 import { AppContext } from "../context/AppContext.jsx";

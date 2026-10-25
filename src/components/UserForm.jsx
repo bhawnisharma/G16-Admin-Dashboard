@@ -1,4 +1,6 @@
-// Owner: Priyanshi - add/edit form
+// Owner: Priyanshi - add/edit form// Ye file kya karti hai: add aur edit dono ke liye ek hi form hai, jisme validation hai
+// Isme useState hai: form ke saare fields ek object mein rakhne ke liye
+// Ye Users.jsx se judi hai, jo ise onSave aur onCancel deta hai
 
 import { useState } from "react";
 
